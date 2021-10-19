@@ -121,8 +121,7 @@ def viewPanel(id):
     return render_template('vieww.html', image = image)
 
 if __name__ == '__main__':
-# Borar el debug = true al terminar la aplicacion    
-    app.run()
+
     
 **Controller**
 from bd import obtener_conexion
@@ -158,7 +157,7 @@ def viewPanel(id):
    
 ## Autor/es
 ---
-**ALEX JAVIER CHURA CUSI**
+**ALEX JAVIER CHURA CUSI** (https://cldup.com/dTxpPi9lDf.thumb.png)](https://flask.palletsprojects.com/en/2.0.x/)
 
 **RICHARD CALLISAYA PUSARICO**
 
