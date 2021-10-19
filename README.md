@@ -7,120 +7,171 @@
 
 Geoportal basico basado en el estado prurinacional de bolivia
 
-## Instalacion
-
-Requiere  [python ](https://www.python.org/downloads/) v6.3+.
-Instalacion de la dependencia flask npm
-
-```sh
-pip install Flask
-```
 ## Documentacion sobre el proyecto
 
 
 ## Tabla de contenidos:
----
 
-- [Badges o escudos](#badges-o-escudos)
+- [Introduccion](#Introduccion)
 - [Descripción y contexto](#descripción-y-contexto)
-- [Guía de usuario](#guía-de-usuario)
+- [Guía de usuario](#Geoportal(Desarrollo))
 - [Guía de instalación](#guía-de-instalación)
-- [Cómo contribuir](#cómo-contribuir)
-- [Código de conducta](#código-de-conducta)
+- [Cómo utilizar Qgis](#Qgis)
+- [Código](#código)
 - [Autor/es](#autores)
 - [Información adicional](#información-adicional)
 - [Licencia](#licencia)
 - [Limitación de responsabilidades - Solo BID](#limitación-de-responsabilidades)
 
-## Badges o escudos
+## Introduccion
 ---
-Es común en muchos repositorios open source el uso de badges o escudos para dar visbilidad el uso de microservicios, licencias, descargas, etc. Recomendamos revisar la iniciativa https://shields.io/ donde según consideres necesario podrás generar badges para tu repo. 
-
-### Ejemplos de badges
-
-- code coverage percentage: ![coverage](https://img.shields.io/badge/coverage-80%25-yellowgreen)
-- stable release version: ![version](https://img.shields.io/badge/version-1.2.3-blue)
-- package manager release: ![gem](https://img.shields.io/badge/gem-2.2.0-blue)
-- status of third-party dependencies: ![dependencies](https://img.shields.io/badge/dependencies-out%20of%20date-orange)
-- static code analysis grade: ![codacy](https://img.shields.io/badge/codacy-B-green)
-- [SemVer](https://semver.org/) version observance: ![semver](https://img.shields.io/badge/semver-2.0.0-blue)
-- amount of [Liberapay](https://liberapay.com/) donations per week: ![receives](https://img.shields.io/badge/receives-2.00%20USD%2Fweek-yellow)
-- Python package downloads: ![downloads](https://img.shields.io/badge/downloads-13k%2Fmonth-brightgreen)
-- Chrome Web Store extension rating: ![rating](https://img.shields.io/badge/rating-★★★★☆-brightgreen)
-- [Uptime Robot](https://uptimerobot.com) percentage: ![uptime](https://img.shields.io/badge/uptime-100%25-brightgreen)
-
-### Badges que solicitamos:
----
-En la iniciativa Código para el Desarrollo solicitamos a los equipos que suman sus herramientas al catálogo de sumar el badge generado por el uso del microservicio de evaluación estática de código SonarCloud.
-
-El badge se ve así y redirige al reporte de evaluación estática del último commit de la herramienta:
-
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=EL-BID_guia-de-publicacion&metric=alert_status)](https://sonarcloud.io/dashboard?id=EL-BID_guia-de-publicacion)
-
+El presente proyecto, fundamentalmente tiene como objetivo brindar una visión en lo que respecta los cambios meteorológicos (inundaciones) y monitorización de las imágenes satelitales es importante realizar un análisis, plan regional y para esto se ha realizado una gran cantidad de investigaciones a nivel mundial sobre la evaluación del cambio del uso del suelo ya que es una parte fundamental para resaltar en el proyecto. Los cuales desde el primer lanzamiento de un satélite en este caso el “Earth Resources Technology Satellite” en 1972 (renombrado Landsat 1), ha logrado un gran desarrollo en los proyectos de análisis que están vinculados con mapeo y monitoreo del medio ambiente (Fragoso, 2017). 
 
 ## Descripción y contexto
 ---
-Esto es un archivo README. Debe contener la documentación de soporte uso de la herramienta digital. Las siguientes secciones son las secciones recomendadas que debes poner incluir en cualquier herramienta digital. Puedes descargar este archivo para que te sirva como plantilla.
+**Inundaciones**
+Según Vargas & Vihar (2017) explican que es un estado en el que el nivel del agua de un río u océano es alto, lo que provoca la inundación de tierras que normalmente no están sumergidas, lo que también es un fenómeno natural que no se puede diagnosticar una vez que se produce. Las inundaciones pueden ocurrir en cualquier momento, pueden llevar horas o incluso ocurrir accidentalmente sin previo aviso.
+Todos los países se enfrentan a inundaciones, ya sea debido a las altas precipitaciones, el desbordamiento de los ríos, mal flujo de agua o simplemente debido a una combinación de factores.
 
-Asegúrate de empezar este archivo con una breve descripción sobre las funcionalidades y contexto de la herramienta digital. Sé conciso y al grano.
+**Imágenes satelitales**
+Las imágenes satelitales también conocidas como imágenes de observación de la Tierra, fotografías desde el espacio o simplemente fotografías de satélite son el producto obtenido por un sensor instalado a bordo de un satélite artificial, mediante la captación de la radiación electromagnética emitida o reflejada por un cuerpo, que posteriormente se transmite a estaciones terrenas para su visualización, procesamiento y análisis.
 
-## Guía de usuario
+**Teledetección**
+Es una tecnología que adquiere datos de la superficie de la tierra a través de sensores instalados en plataformas espaciales. La interacción electromagnética entre el suelo y el sensor produce una serie de datos que se pueden procesar para obtener información interpretable de la Tierra (Instituto Geográfico Nacional, 2018).
+
+
+
+
+## Geoportal(Desarrollo)
 ---
-Explica los pasos básicos sobre cómo usar la herramienta digital. Es una buena sección para mostrar capturas de pantalla o gifs que ayuden a entender la herramienta digital.
+El Desarrollo fue realizado con el lenguaje Python y con el Framework Flask, se optó por estas herramientas ya que se acomodan de acuerdo al tamaño y tipo proyecto que se tiene. El proyecto fue pensado en primera instancia para funcionar de manera local
+todos los datos cargados al GeoPortal son almacenados dentro una Base de Datos la cual es Mysql. 
+
  	
 ## Guía de instalación
+Requiere  [python ](https://www.python.org/downloads/) v6.3+.
+Instalacion de la dependencia flask npm
+ sh
+pip install Flask
+
+
+
+## Qgis 
 ---
-Paso a paso de cómo instalar la herramienta digital. En esta sección es recomendable explicar la arquitectura de carpetas y módulos que componen el sistema.
+QGIS es un Sistema de Información Geográfica (SIG) de Código Abierto licenciado bajo GNU - General Public License . QGIS es un proyecto oficial de Open Source Geospatial Foundation (OSGeo).
 
-Según el tipo de herramienta digital, el nivel de complejidad puede variar. En algunas ocasiones puede ser necesario instalar componentes que tienen dependencia con la herramienta digital. Si este es el caso, añade también la siguiente sección.
+Principales herramientas que QGIS nos proporciona en el campo de la teledetección
+Cálculo de estadísticas e histogramas.
+Filtrajes.
+Corrección de imágenes de satélite.
+Clasificación de imágenes de satélite.
+Detección de cambios.
+Cálculo de índices de vegetación y monitorización de incendios.
 
-La guía de instalación debe contener de manera específica:
-- Los requisitos del sistema operativo para la compilación (versiones específicas de librerías, software de gestión de paquetes y dependencias, SDKs y compiladores, etc.).
-- Las dependencias propias del proyecto, tanto externas como internas (orden de compilación de sub-módulos, configuración de ubicación de librerías dinámicas, etc.).
-- Pasos específicos para la compilación del código fuente y ejecución de tests unitarios en caso de que el proyecto disponga de ellos.
-
-### Dependencias
-Descripción de los recursos externos que generan una dependencia para la reutilización de la herramienta digital (librerías, frameworks, acceso a bases de datos y licencias de cada recurso). Es una buena práctica describir las últimas versiones en las que ha sido probada la herramienta digital. 
-
-    Puedes usar este estilo de letra diferenciar los comandos de instalación.
-
-## Cómo contribuir
+## código
 ---
-Esta sección explica a desarrolladores cuáles son las maneras habituales de enviar una solicitud de adhesión de nuevo código (“pull requests”), cómo declarar fallos en la herramienta y qué guías de estilo se deben usar al escribir más líneas de código. También puedes hacer un listado de puntos que se pueden mejorar de tu código para crear ideas de mejora.
+**INDEX**
+from logging import debug
+import os
+import cv2
+from flask import Flask, app, render_template, request, redirect, flash, url_for, send_from_directory
+from werkzeug.utils import secure_filename
+import controller
 
-## Código de conducta 
----
-El código de conducta establece las normas sociales, reglas y responsabilidades que los individuos y organizaciones deben seguir al interactuar de alguna manera con la herramienta digital o su comunidad. Es una buena práctica para crear un ambiente de respeto e inclusión en las contribuciones al proyecto. 
+UPLOAD_FOLDER = './static/image'
 
-La plataforma Github premia y ayuda a los repositorios dispongan de este archivo. Al crear CODE_OF_CONDUCT.md puedes empezar desde una plantilla sugerida por ellos. Puedes leer más sobre cómo crear un archivo de Código de Conducta (aquí)[https://help.github.com/articles/adding-a-code-of-conduct-to-your-project/]
+app = Flask(__name__)
 
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+@app.route('/')
+def home():
+    image = controller.views()
+    return render_template('content.html', image = image)
+
+@app.route('/contact')
+def contact():
+    image = controller.views()
+    return render_template('contact.html', image = image)
+
+@app.route('/image')
+def image():
+    image = controller.views()
+    return render_template('image.html', image = image)
+
+@app.route('/addimage', methods=["POST", "GET"])
+def addimage():
+    return render_template('add.html')
+
+@app.route('/add', methods=["POST", "GET"])
+def add():
+    titulo = request.form["titulo"]
+    ciudad = request.form["ciudad"]
+    descripcion = request.form["descripcion"]
+    file = request.files["image"]
+    filename = secure_filename(file.filename)
+    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    image = filename
+    controller.inser(titulo, ciudad, image, descripcion)
+    return redirect('/image')
+
+@app.route('/viewPanel/<int:id>', methods=["POST", "GET"])
+def viewPanel(id):
+    image = controller.viewPanel(id)
+    return render_template('vieww.html', image = image)
+
+if __name__ == '__main__':
+# Borar el debug = true al terminar la aplicacion    
+    app.run()
+    
+**Controller**
+from bd import obtener_conexion
+from index import image
+
+def inser(titulo, ciudad, image, descripcion):
+    conexion = obtener_conexion()
+    with conexion.cursor() as cursor:
+        cursor.execute("INSERT INTO image(titulo, ciudad, image, descripcion) VALUES (%s, %s, %s, %s)",
+                       (titulo, ciudad, image, descripcion))
+    conexion.commit()
+    conexion.close()
+
+
+def views():
+    conexion = obtener_conexion()
+    image = []
+    with conexion.cursor() as cursor:
+        cursor.execute("SELECT id, titulo, ciudad, image, descripcion FROM image")
+        image = cursor.fetchall()
+    conexion.close()
+    return image
+
+def viewPanel(id):
+    conexion = obtener_conexion()
+    image = None
+    with conexion.cursor() as cursor:
+        cursor.execute(
+            "SELECT id, titulo, ciudad, image, descripcion FROM image WHERE id = %s", (id,))
+        image = cursor.fetchone()
+    conexion.close()
+    return image
+   
 ## Autor/es
 ---
-Nombra a el/los autor/es original/es. Consulta con ellos antes de publicar un email o un nombre personal. Una manera muy común es dirigirlos a sus cuentas de redes sociales.
+**ALEX JAVIER CHURA CUSI**
+
+**RICHARD CALLISAYA PUSARICO**
+
+**EDDY GONZALO ARGUEDAS MOYA**
+
+**JORGE GALVEZ CLAROS**
+
+**ABRAHAM QUIROGA GUZMAN**
+
 
 ## Información adicional
 ---
-Esta es la sección que permite agregar más información de contexto al proyecto como alguna web de relevancia, proyectos similares o que hayan usado la misma tecnología.
 
-## Licencia 
----
-
-La licencia especifica los permisos y las condiciones de uso que el desarrollador otorga a otros desarrolladores que usen y/o modifiquen la herramienta digital.
-
-Incluye en esta sección una nota con el tipo de licencia otorgado a esta herramienta digital. El texto de la licencia debe estar incluído en un archivo *LICENSE.md* o *LICENSE.txt* en la raíz del repositorio.
-
-Si desconoces qué tipos de licencias existen y cuál es la mejor para cada caso, te recomendamos visitar la página https://choosealicense.com/.
-
-Si la herramienta que estás publicando con la iniciativa Código para el Desarrollo ha sido financiada por el BID, te invitamos a revisar la [licencia oficial del banco para publicar software](https://github.com/EL-BID/Plantilla-de-repositorio/blob/master/LICENSE.md)
-
-## Limitación de responsabilidades
-Disclaimer: Esta sección es solo para herramientas financiadas por el BID.
-
-El BID no será responsable, bajo circunstancia alguna, de daño ni indemnización, moral o patrimonial; directo o indirecto; accesorio o especial; o por vía de consecuencia, previsto o imprevisto, que pudiese surgir:
-
-i. Bajo cualquier teoría de responsabilidad, ya sea por contrato, infracción de derechos de propiedad intelectual, negligencia o bajo cualquier otra teoría; y/o
-
-ii. A raíz del uso de la Herramienta Digital, incluyendo, pero sin limitación de potenciales defectos en la Herramienta Digital, o la pérdida o inexactitud de los datos de cualquier tipo. Lo anterior incluye los gastos o daños asociados a fallas de comunicación y/o fallas de funcionamiento de computadoras, vinculados con la utilización de la Herramienta Digital.
 
 ## Licencia
 
