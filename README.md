@@ -1,5 +1,5 @@
 # GeoportalCX
-## Geoportal basico sobre Bolivia
+## Geoportal para el procesamiento de imagenes satelitales y monitoreo de inundaciones en diferentes regiones de Bolivia
 
 [![N|Sekker](https://cldup.com/dTxpPi9lDf.thumb.png)](https://flask.palletsprojects.com/en/2.0.x/)
 
