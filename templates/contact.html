@@ -1,0 +1,57 @@
+{% extends './index.html' %}
+
+{% block body %}
+
+<div class="container">
+    <br>
+    <div class="rom">
+        <div class="col align-self-center">
+            <figure class="text-center">
+                <blockquote class="blockquote">
+                    <br>
+                    <h1>Mapa de Bolivia</h1>
+                    <br>
+                    <p>
+                        El proyecto consiste en el desarrollando de una aplicación web que permita la consulta de información temática relativa a las diferentes zonas geopgraficas que se tenga dentro de Bolivia todo el mapa obtenida de un API ArcGis para su representación geográfica en visor de mapas.
+                    </p>
+                </blockquote>
+            </figure>
+            <br>
+            <div class="embed-container">
+                <small><a href="//learngis2.maps.arcgis.com/apps/Embed/index.html?webmap=f335e4f55f9840099a4f0d74424956dc&extent=-78.0997,-24.6807,-55.1163,-8.6394&home=true&zoom=true&scale=true&details=true&basemap_gallery=true&disable_scroll=true&theme=dark" style="color:#0000FF;text-align:left" target="_blank">Ver mapa más grande</a></small>
+                <br>
+                <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="bolivia" src="//learngis2.maps.arcgis.com/apps/Embed/index.html?webmap=f335e4f55f9840099a4f0d74424956dc&extent=-78.0997,-24.6807,-55.1163,-8.6394&home=true&zoom=true&previewImage=false&scale=true&details=true&basemap_gallery=true&disable_scroll=true&theme=dark"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<main>
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Album de Imagenes</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                {% for cls in image %}
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="./static/image/{{cls[3]}}"class="rounded" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">{{cls[4]}}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</main>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends './index.html' %}
+
+{% block body %}
+
+<div class="container">
+    <br>
+    <div class="rom">
+        <div class="col align-self-center">
+            <figure class="text-center">
+                <blockquote class="blockquote">
+                    <br>
+                    <h1>{{image[1]}}</h1>
+                    <br>
+                </blockquote>
+            </figure>
+        </div>
+
+        <img src="/static/image/{{image[3]}}"class="img-fluid" alt="...">
+
+        <section class="py-5">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <p class="lead text-muted">Descripcion:</p>
+                    <p class="lead text-muted">{{image[4]}}</p>
+                </div>
+            </div>
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <p class="lead text-muted">Ciudad:</p>
+                    <p class="lead text-muted">{{image[1]}}</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+{% endblock %}
