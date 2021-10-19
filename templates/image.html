@@ -1,0 +1,64 @@
+{% extends './index.html' %}
+
+{% block body %}
+<main>
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Album de Imagenes</h1>
+                <p class="lead text-muted">El procesamiento de imágenes implica la manipulación e interpretación de imágenes digitales con la ayuda de una computadora. La aplicación de esta técnica al sensado remoto comenzó hace unos treinta años, utilizando datos e imágenes aéreas digitalizadas usando scaners multiespectrales.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <select class="form-select" aria-label="Default select example" name="select-location" id="select-location">
+                        <option selected>Seleccione una ciudad</option>
+                        <option value="La Paz">La Paz</option>
+                        <option value="Cochabamba">Cochabamba</option>
+                        <option value="Pando">Pando</option>
+                        <option value="Sucre">Sucre</option>
+                        <option value="Oruro">Oruro</option>
+                        <option value="Tarija">Tarija</option>
+                        <option value="Beni">Beni</option>
+                        <option value="Potosi">Potosi</option>
+                    </select>
+                </div>
+                <div class="col-sm-8">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <a href="{{ url_for('addimage') }}">
+                            <button class="btn btn-success me-md-2" type="button">+ Agregar</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                {% for cls in image %}
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="./static/image/{{cls[3]}}"class="rounded" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">{{cls[4]}}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="{{url_for('viewPanel', id=cls[0])}}">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+</main>
+
+{% endblock %}

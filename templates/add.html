@@ -1,0 +1,44 @@
+{% extends './index.html' %}
+
+{% block body %}
+<div class="container">
+    <br>
+    <div class="rom">
+        <br>
+        <h1>Agregar Imagen</h1>
+        <br>
+        <form action="{{url_for('add')}}" method="POST" enctype="multipart/form-data">
+
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Titulo (*)</label>
+                <input type="text" class="form-control" id="titulo" placeholder="Titulo..." name="titulo">
+            </div>
+
+            <label for="ciudad" class="form-label">Ciudad (*)</label>
+            <input class="form-control" list="datalistOptions" id="ciudad" placeholder="Escoga una ciudad..." name="ciudad">
+            <datalist id="datalistOptions">
+                <option value="La Paz">
+                <option value="Santa Cruz">
+                <option value="Beni">
+                <option value="Pando">
+            </datalist>
+
+            <div class="mb-3">
+                <label for="image" class="form-label">
+                    Imagen (*)
+                </label>
+                <input class="form-control" type="file" id="image" name="image">
+            </div>
+
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripcion (*) </label>
+                <textarea class="form-control" id="descripcion" rows="7" name="descripcion"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success">Guardar</button>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
